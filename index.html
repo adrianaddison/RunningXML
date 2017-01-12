@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+  <!-- <link rel="shortcut icon" href=""> -->
+</head>
+<body>
+
+<section id="dvContent">
+    <div id="workout">
+      <h1>Workout</h1>
+    </div>
+    <div id="coolDown">
+      <h1>Cool Down</h1>
+    </div>
+    <div id="total">
+      <h1>Total</h1>
+    </div>
+</section>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+// Bringing in running sessions from gym
+<script>
+$(document).ready(function(){
+  $("#workout").append("<ul></ul>");
+  $.ajax({
+    type: "GET",
+    url: "Jan2_2017.xml",
+    dataType: "xml",
+    success: function(xml){
+    $(xml).find('workout').each(function(){
+      var sElapsedTime = $(this).find('elapsed_time').text();
+      var sAvgHeartRate = $(this).find('avg_heart_rate').text();
+      var sMaxHeartRate = $(this).find('max_heart_rate').text();
+      $("<li></li>").html("Elapsed Time: " + sElapsedTime + "mins").appendTo("#workout ul");
+      $("<li></li>").html("Avg Heart Rate: " + sAvgHeartRate + "b/m").appendTo("#workout ul");
+      $("<li></li>").html("Max Heart Rate: " + sMaxHeartRate + "b/m").appendTo("#workout ul");
+    });
+  },
+  error: function() {alert("An error occurred while processing XML file.");
+  }
+  });
+});
+$(document).ready(function(){
+  $("#coolDown").append("<ul></ul>");
+  $.ajax({
+    type: "GET",
+    url: "Jan2_2017.xml",
+    dataType: "xml",
+    success: function(xml){
+    $(xml).find('cool_down').each(function(){
+      var sElapsedTime = $(this).find('elapsed_time').text();
+      var sAvgHeartRate = $(this).find('avg_heart_rate').text();
+      var sMaxHeartRate = $(this).find('max_heart_rate').text();
+      $("<li></li>").html("Elapsed Time: " + sElapsedTime + "mins").appendTo("#coolDown ul");
+      $("<li></li>").html("Avg Heart Rate: " + sAvgHeartRate + "b/m").appendTo("#coolDown ul");
+      $("<li></li>").html("Max Heart Rate: " + sMaxHeartRate + "b/m").appendTo("#coolDown ul");
+    });
+  },
+  error: function() {alert("An error occurred while processing XML file.");
+  }
+  });
+});
+
+$(document).ready(function(){
+  $("#total").append("<ul></ul>");
+  $.ajax({
+    type: "GET",
+    url: "Jan2_2017.xml",
+    dataType: "xml",
+    success: function(xml){
+    $(xml).find('total').each(function(){
+      var sElapsedTime = $(this).find('elapsed_time').text();
+      var sAvgHeartRate = $(this).find('avg_heart_rate').text();
+      var sMaxHeartRate = $(this).find('max_heart_rate').text();
+      $("<li></li>").html("Elapsed Time: " + sElapsedTime + "mins").appendTo("#total ul");
+      $("<li></li>").html("Avg Heart Rate: " + sAvgHeartRate + "b/m").appendTo("#total ul");
+      $("<li></li>").html("Max Heart Rate: " + sMaxHeartRate + "b/m").appendTo("#total ul");
+    });
+  },
+  error: function() {alert("An error occurred while processing XML file.");
+  }
+  });
+});
+
+</script>
+
+</body>
+</html>

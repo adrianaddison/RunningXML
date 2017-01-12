@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<workout_summary equipment_type="Treadmill" workout_type="MANUAL WORKOUT">
+  <user>
+    <age> 42 </age>
+    <weight units="lbs"> 200 </weight>
+  </user>
+  <workout>
+    <elapsed_time> 60:38 </elapsed_time>
+    <avg_heart_rate> 133 </avg_heart_rate>
+    <max_heart_rate> 163 </max_heart_rate>
+    <avg_speed units="mph"> 3.05 </avg_speed>
+    <max_speed units="mph"> 5.00 </max_speed>
+    <avg_pace units="/mi"> 19:40 </avg_pace>
+    <distance units="miles"> 3.07 </distance>
+    <calories> 601 </calories>
+  </workout>
+  <cool_down>
+    <elapsed_time> 2:00 </elapsed_time>
+    <avg_heart_rate> 0 </avg_heart_rate>
+    <max_heart_rate> 0 </max_heart_rate>
+    <avg_speed units="mph"> 1.40 </avg_speed>
+    <max_speed units="mph"> 1.40 </max_speed>
+    <avg_pace units="/mi"> 42:51 </avg_pace>
+    <distance units="miles"> 0.04 </distance>
+    <calories> 6 </calories>
+  </cool_down>
+  <total>
+    <elapsed_time> 62:38 </elapsed_time>
+    <avg_heart_rate> 133 </avg_heart_rate>
+    <max_heart_rate> 163 </max_heart_rate>
+    <avg_speed units="mph"> 2.98 </avg_speed>
+    <max_speed units="mph"> 5.00 </max_speed>
+    <avg_pace units="/mi"> 20:08 </avg_pace>
+    <distance units="miles"> 3.12 </distance>
+    <calories> 608 </calories>
+  </total>
+</workout_summary>
